@@ -3,7 +3,7 @@
     "description": "WildDevs REST API client",
     "type": "library",
     "homepage": "https://github.com/WildDevs/rest-php-sdk",
-    "license": "GPLv3",
+    "license": "GPL-3.0-or-later",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
