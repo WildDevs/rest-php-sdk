@@ -61,6 +61,6 @@ class API {
   }
 
   public function welcome(): Response {
-    return $this->getHttpClient()->get("/");
+    return $this->getHttpClient()->get("/", $this->getHeaders());
   }
 }
