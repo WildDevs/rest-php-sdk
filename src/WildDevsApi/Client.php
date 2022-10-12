@@ -6,7 +6,7 @@ use Exception;
 use WildDevsApi\Models\Response;
 
 /**
- * WildDevsApi sms client
+ * WildDevsApi
  */
 class Client
 {

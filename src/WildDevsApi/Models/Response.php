@@ -30,4 +30,10 @@ class Response extends Base
      * @var mixed
      */
     public $note = null;
+    
+    /**
+     * response message
+     * @var mixed
+     */
+    public $message = null;
 }
