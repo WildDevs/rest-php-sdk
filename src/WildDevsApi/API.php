@@ -20,11 +20,11 @@ class API {
 
   private $_auth;
 
-  public function getHttpClient(): HttpClient {
+  public function getHttpClient(): WildDevsApi\HttpClient {
     return $this->_httpClient;
   }
 
-  public function setHttpClient(HttpClient $httpClient) {
+  public function setHttpClient(WildDevsApi\HttpClient $httpClient) {
     $this->_httpClient = $httpClient;
     return $this;
   }
@@ -59,7 +59,7 @@ class API {
   }
 
   public function __construct() {
-    $this->setHttpClient(new HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
+    $this->setHttpClient(new WildDevsApi\HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
     $this->setAuth(new Auth());
   }
 

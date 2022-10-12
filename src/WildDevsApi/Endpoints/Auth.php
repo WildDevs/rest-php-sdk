@@ -10,16 +10,16 @@ class Auth
 {
   private $_httpClient;
 
-  private function getHttpClient(): HttpClient {
+  private function getHttpClient(): WildDevsApi\HttpClient {
     return $this->_httpClient;
   }
 
-  private function setHttpClient(HttpClient $httpClient) {
+  private function setHttpClient(WildDevsApi\HttpClient $httpClient) {
     $this->_httpClient = $httpClient;
     return $this;
   }
 
-  public function __construct(HttpClient $httpClient) {
+  public function __construct(WildDevsApi\HttpClient $httpClient) {
     $this->setHttpClient($httpClient);
   }
 
