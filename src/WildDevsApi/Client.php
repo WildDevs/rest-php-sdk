@@ -26,7 +26,7 @@ class Client
      * Api endpoint
      * @var string
      */
-    const ENDPOINT = "https://api2.WildDevsApi.com/api/v1";
+    const ENDPOINT = "https://api.wild-devs.net/v1";
 
     /**
      * HTTP client
@@ -60,14 +60,14 @@ class Client
         }
     }
 
-    // public function getCredit(): float
-    // {
-    //     $res = $this->_httpClient->get("/sms/accounting/credit/show");
+    public function welcome(): float
+    {
+        $res = $this->_httpClient->get("/");
 
-    //     if (!isset($res->data->credit)) {
-    //         throw new Exception("returned response not valid", 1);
-    //     }
+        if (!isset($res->data->credit)) {
+            throw new Exception("returned response not valid", 1);
+        }
 
-    //     return $res->data->credit;
-    // }
+        return $res->data;
+    }
 }
