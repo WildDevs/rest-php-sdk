@@ -3,6 +3,7 @@
 namespace WildDevsApi;
 
 use Exception;
+use WildDevsApi\HttpClient;
 use WildDevsApi\Models\Response;
 use WildDevsApi\Endpoints\Auth;
 
