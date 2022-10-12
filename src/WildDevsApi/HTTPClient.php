@@ -9,101 +9,22 @@ use WildDevsApi\Models\Response;
 /**
  * HTTPClient is an abstract client implementation for http
  */
-class HTTPClient
+class HttpClient
 {
-    /**
-     * Request base url
-     * @var string
-     */
     private $_baseURL;
-
-    /**
-     * Request connection & response timeout in seconds
-     * @var int
-     */
     private $_timeout = 30;
 
-    /**
-     * Request headers
-     * @var array
-     */
-    private $_headers;
-
-    /**
-     * Supported http response codes
-     */
-    private $_supportedStatusCodes = array(200, 201, 204, 400, 401, 403, 404, 405, 422, 500);
-
-    /**
-     * Http client constructor
-     * @param string $baseURL base url for client
-     * @param int $timeout request timeout
-     * @param array $headers request headers
-     */
-    public function __construct($baseURL, $timeout = 30, $headers = array())
-    {
+    public function __construct($baseURL, $timeout = 30) {
         $this->_baseURL = $baseURL;
-
-        if ($timeout > 0) {
-            $this->_timeout = $timeout;
-        }
-
-        $this->_headers = $headers;
+        if ($timeout > 0) $this->_timeout = $timeout;
     }
 
-    /**
-     * Make a Base url with given uri and query parameters
-     * @param string $uri uri
-     * @param array $params query params
-     * @return string
-     */
-    public function getBaseURL($uri, $params = null)
-    {
-        if (!$uri && !$params) {
-            throw new InvalidArgumentException("function needs at least one argument");
-        }
-
-        $url = rtrim($this->_baseURL, '/');
-
-        $url .= '/' . ltrim($uri, '/');
-
-        if ($params) {
-            $query = http_build_query($params);
-            $url .= "?" . $query;
-        }
-
-        return $url;
-    }
-
-    /**
-     * Make custom http request
-     * @param string $method http method
-     * @param string $url request url
-     * @param mixed $data request data
-     * @param array $params query parameters
-     * @param array $headers http headers 
-     * @return Response parsed response
-     * @throws Errors\HttpException
-     * @throws Errors\Error
-     */
-    public function request(
-        $method = "GET",
-        $url = "",
-        $params = null,
-        $data = null,
-        $headers = null
-    ) {
+    public function request($method = "GET", $url = "", $data = null, $headers = []) {
         $curl = curl_init();
-
-        if (!$headers || count($headers) < 1) {
-            $headers = ['Accept: application/json', 'Content-Type: application/json'];
-        }
-
-        $headers = array_merge($headers, $this->_headers);
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_URL, $this->getBaseURL($url, $params));
+        curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, $this->_timeout);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, $this->_timeout);
@@ -128,30 +49,16 @@ class HTTPClient
         }
 
         $response = curl_exec($curl);
-
-        if ($response === false) {
-            throw new Errors\HttpException(curl_error($curl));
-        }
-
-        // get http status
-        $status = (int) curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
+        if ($response === false) throw new Errors\HttpException(curl_error($curl));
+        
         curl_close($curl);
 
-        // http status code is parsable or not
-        if (!in_array($status, $this->_supportedStatusCodes)) {
-            throw new Errors\HttpException("unexpected http error occurred", $status);
-        }
-
-        $arrayResponse = json_decode($response);
-
-        if (!$arrayResponse) {
-            throw new Error(sprintf("Invalid response: %s", $response));
-        }
+        $resp = json_decode($response);
+        if (!$resp) throw new Error("Invalid response: " . $response);
 
         // marshal received response to base Response object
         $parsedResponse = new Response();
-        $parsedResponse->fromJSON($arrayResponse);
+        $parsedResponse->fromJSON($resp);
 
         $errors = Error::parseErrors($parsedResponse);
         if ($errors) {
@@ -161,31 +68,19 @@ class HTTPClient
         return $parsedResponse;
     }
 
-    /**
-     * Make http GET request
-     * @param string $url request url
-     * @param array|null $params query parameters 
-     * @param array|null $headers http headers
-     * @return Models\Response parsed response
-     * @throws Errors\HttpException
-     * @throws Errors\Error
-     */
-    public function get($url, $params = null, $headers = null)
-    {
-        return $this->request("GET", $url, $params, null, $headers);
+    public function get($url, $headers = []) {
+        return $this->request("GET", $url, null, $headers);
     }
 
-    /**
-     * Make http POST request
-     * @param string $url request url
-     * @param mixed $data request body
-     * @param array|null $headers http headers
-     * @return Models\Response parsed response
-     * @throws Errors\HttpException
-     * @throws Errors\Error
-     */
-    public function post($url, $data, $headers = null)
-    {
-        return $this->request("POST", $url, null, $data, $headers);
+    public function post($url, $data, $headers = []) {
+        return $this->request("POST", $url, $data, $headers);
+    }
+
+    public function put($url, $data, $headers = []) {
+        return $this->request("PUT", $url, $data, $headers);
+    }
+
+    public function delete($url, $headers = []) {
+        return $this->request("DELETE", $url, null, $headers);
     }
 }
