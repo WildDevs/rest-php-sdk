@@ -8,32 +8,32 @@ namespace WildDevsApi\Models;
 class Response extends Base
 {
     /**
-     * http status code
-     * @var int
+     * response status 
+     * @var string
      */
-    public $status = 200;
+    public $status = null;
 
     /**
      * response code
-     * @var string
+     * @var int
      */
-    public $code = "";
+    public $code = null;
 
     /**
-     * response data
+     * response message
      * @var mixed
      */
-    public $data = null;
+    public $message = null;
 
     /**
      * response note
      * @var mixed
      */
     public $note = null;
-    
+
     /**
-     * response message
+     * response data
      * @var mixed
      */
-    public $message = null;
+    public $data = null;
 }

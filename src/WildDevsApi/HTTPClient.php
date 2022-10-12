@@ -32,7 +32,7 @@ class HTTPClient
     /**
      * Supported http response codes
      */
-    private $_supportedStatusCodes = array(200, 201, 204, 400, 403, 404, 405, 422, 500);
+    private $_supportedStatusCodes = array(200, 201, 204, 400, 401, 403, 404, 405, 422, 500);
 
     /**
      * Http client constructor
@@ -52,12 +52,12 @@ class HTTPClient
     }
 
     /**
-     * Make a based url with given uri and query parameters
+     * Make a Base url with given uri and query parameters
      * @param string $uri uri
      * @param array $params query params
      * @return string
      */
-    public function getBasedURL($uri, $params = null)
+    public function getBaseURL($uri, $params = null)
     {
         if (!$uri && !$params) {
             throw new InvalidArgumentException("function needs at least one argument");
@@ -89,8 +89,8 @@ class HTTPClient
     public function request(
         $method = "GET",
         $url = "",
-        $data = null,
         $params = null,
+        $data = null,
         $headers = null
     ) {
         $curl = curl_init();
@@ -103,8 +103,8 @@ class HTTPClient
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_URL, $this->getBasedURL($url, $params));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // no need in php 5.1.3+.
+        curl_setopt($curl, CURLOPT_URL, $this->getBaseURL($url, $params));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, $this->_timeout);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, $this->_timeout);
 
@@ -112,9 +112,16 @@ class HTTPClient
             case 'GET':
                 curl_setopt($curl, CURLOPT_HTTPGET, true);
                 break;
+            case 'PUT':
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+                curl_setopt($curl, CURLOPT_POSTFIELDS, @json_encode($data));
+                break;
             case 'POST':
                 curl_setopt($curl, CURLOPT_POST, true);
                 curl_setopt($curl, CURLOPT_POSTFIELDS, @json_encode($data));
+                break;
+            case 'DELETE':
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
                 break;
             default:
                 curl_setopt($curl, CURLOPT_HTTPGET, true);
@@ -165,7 +172,7 @@ class HTTPClient
      */
     public function get($url, $params = null, $headers = null)
     {
-        return $this->request("GET", $url, null, $params, $headers);
+        return $this->request("GET", $url, $params, null, $headers);
     }
 
     /**
@@ -179,6 +186,6 @@ class HTTPClient
      */
     public function post($url, $data, $headers = null)
     {
-        return $this->request("POST", $url, $data, null, $headers);
+        return $this->request("POST", $url, null, $data, $headers);
     }
 }

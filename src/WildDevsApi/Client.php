@@ -60,10 +60,10 @@ class Client
         }
     }
 
-    public function welcome(): Response
+    public function welcome(): string
     {
         $res = $this->_httpClient->get("/");
-        if (!isset($res)) throw new Exception("returned response not valid", 1);
-        return $res;
+        if (!isset($res->message)) throw new Exception("returned response not valid", 1);
+        return $res->message;
     }
 }
