@@ -60,7 +60,7 @@ class Client
         }
     }
 
-    public function welcome(): float
+    public function welcome(): Response
     {
         $res = $this->_httpClient->get("/");
         if (!isset($res)) throw new Exception("returned response not valid", 1);
