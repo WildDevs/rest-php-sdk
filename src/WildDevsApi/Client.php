@@ -63,11 +63,7 @@ class Client
     public function welcome(): float
     {
         $res = $this->_httpClient->get("/");
-
-        if (!isset($res->data->credit)) {
-            throw new Exception("returned response not valid", 1);
-        }
-
-        return $res->data;
+        if (!isset($res)) throw new Exception("returned response not valid", 1);
+        return $res;
     }
 }
