@@ -1,10 +1,10 @@
 <?php
 
-namespace WildDevsApi;
+namespace WildDevs;
 
 use Exception;
-use WildDevsApi\Models\Response;
-use WildDevsApi\Endpoints\Auth;
+use WildDevs\Models\Response;
+use WildDevs\Endpoints\Auth;
 
 /**
  * Wild Devs Api
@@ -23,26 +23,24 @@ class API {
     return $this->_httpClient;
   }
 
-  public function setHttpClient(HttpClient $httpClient) {
+  public function setHttpClient(HttpClient $httpClient): void {
     $this->_httpClient = $httpClient;
-    return $this;
   }
 
   public function getApiKey(): string {
     return $this->_apiKey;
   }
 
-  public function setApiKey(string $apiKey) {
+  public function setApiKey(string $apiKey): void {
     $this->_apiKey = $apiKey;
-    return $this;
   }
 
   public function Auth(): Auth {
     return $this->_auth;
   }
 
-  private function setAuth(Auth $auth) {
-    return $this->_auth;
+  private function setAuth(Auth $auth): void {
+    $this->_auth = $auth;
   }
 
   public function getHeaders(): array {
@@ -59,7 +57,7 @@ class API {
 
   public function __construct() {
     $this->setHttpClient(new HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
-    $this->setAuth(new Auth());
+    $this->setAuth(new Auth($this->getHttpClient()));
   }
 
   public function welcome(): Response {

@@ -1,6 +1,6 @@
 <?php
 
-namespace WildDevsApi\Models;
+namespace WildDevs\Models;
 
 /**
  * Snake to camel

@@ -1,9 +1,9 @@
 {
     "name": "wilddevs/php-rest-sdk",
-    "description": "WildDevsApi REST API client",
+    "description": "WildDevs REST API client",
     "type": "library",
     "homepage": "https://github.com/WildDevs/rest-php-sdk",
-    "license": "BSD-2-Clause",
+    "license": "GPLv3",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "WildDevsApi\\": "src/WildDevsApi/"
+            "WildDevs\\": "src/"
         }
     }
 }

@@ -1,14 +1,11 @@
 <?php
 
-namespace WildDevsApi;
+namespace WildDevs;
 
 use InvalidArgumentException;
-use WildDevsApi\Errors\Error;
-use WildDevsApi\Models\Response;
+use WildDevs\Errors\Error;
+use WildDevs\Models\Response;
 
-/**
- * HTTPClient is an abstract client implementation for http
- */
 class HttpClient
 {
     private $_baseURL;
@@ -56,14 +53,11 @@ class HttpClient
         $resp = json_decode($response);
         if (!$resp) throw new Error("Invalid response: " . $response);
 
-        // marshal received response to base Response object
         $parsedResponse = new Response();
         $parsedResponse->fromJSON($resp);
 
         $errors = Error::parseErrors($parsedResponse);
-        if ($errors) {
-            throw $errors;
-        }
+        if ($errors) throw $errors;
 
         return $parsedResponse;
     }

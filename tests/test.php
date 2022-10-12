@@ -1,8 +1,8 @@
 <?php
 
-use WildDevsApi\Client;
-use WildDevsApi\Errors\Error;
-use WildDevsApi\Errors\ResponseCodes;
+use WildDevs\Client;
+use WildDevs\Errors\Error;
+use WildDevs\Errors\ResponseCodes;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 

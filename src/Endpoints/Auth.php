@@ -1,10 +1,10 @@
 <?php
 
-namespace WildDevsApi\Endpoints;
+namespace WildDevs\Endpoints;
 
 use Exception;
-use WildDevsApi\HttpClient;
-use WildDevsApi\Models\Response;
+use WildDevs\HttpClient;
+use WildDevs\Models\Response;
 
 class Auth
 {
@@ -14,9 +14,8 @@ class Auth
     return $this->_httpClient;
   }
 
-  private function setHttpClient(HttpClient $httpClient) {
+  private function setHttpClient(HttpClient $httpClient): void {
     $this->_httpClient = $httpClient;
-    return $this;
   }
 
   public function __construct(HttpClient $httpClient) {

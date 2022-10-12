@@ -5,10 +5,10 @@ if (file_exists(__DIR__.'/vendor/autoload.php')) {
 } else {
     spl_autoload_register(function ($class) {
         // project-specific namespace prefix
-        $prefix = 'WildDevsApi\\';
+        $prefix = 'WildDevs\\';
 
         // base directory for the namespace prefix
-        $base_dir = __DIR__ . '/src/WildDevsApi/';
+        $base_dir = __DIR__ . '/src/';
 
         // does the class use the namespace prefix?
         $len = strlen($prefix);

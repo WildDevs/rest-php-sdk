@@ -1,6 +1,6 @@
 <?php
 
-namespace WildDevsApi\Errors;
+namespace WildDevs\Errors;
 
 class Error extends \Exception
 {
