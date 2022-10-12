@@ -38,7 +38,7 @@ class HttpClient
 
         curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($curl, CURLOPT_HEADER, false);
-        curl_setopt($curl, CURLOPT_URL, $url);
+        curl_setopt($curl, CURLOPT_URL, $this->getBaseURL().$url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_TIMEOUT, $this->_timeout);
         curl_setopt($curl, CURLOPT_CONNECTTIMEOUT, $this->_timeout);
