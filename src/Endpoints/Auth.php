@@ -26,6 +26,10 @@ class Auth
     return $this->getHttpClient()->get('/public');
   }
 
+  public function test2(): Response {
+    return $this->getHttpClient()->get('/member');
+  }
+
   public function register(){
 
   }
