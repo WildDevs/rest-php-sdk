@@ -4,7 +4,7 @@
     "type": "library",
     "homepage": "https://github.com/WildDevs/rest-php-sdk",
     "license": "BSD-2-Clause",
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true,
     "authors": [
         {
