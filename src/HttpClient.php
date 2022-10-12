@@ -4,6 +4,7 @@ namespace WildDevs;
 
 use InvalidArgumentException;
 use WildDevs\Errors\Error;
+use WildDevs\Errors\HttpException;
 use WildDevs\Models\Response;
 
 class HttpClient
@@ -31,7 +32,7 @@ class HttpClient
                 curl_setopt($curl, CURLOPT_HTTPGET, true);
                 break;
             case 'PUT':
-                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "PUT");
                 curl_setopt($curl, CURLOPT_POSTFIELDS, @json_encode($data));
                 break;
             case 'POST':
@@ -39,14 +40,14 @@ class HttpClient
                 curl_setopt($curl, CURLOPT_POSTFIELDS, @json_encode($data));
                 break;
             case 'DELETE':
-                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+                curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "DELETE");
                 break;
             default:
                 curl_setopt($curl, CURLOPT_HTTPGET, true);
         }
 
         $response = curl_exec($curl);
-        if ($response === false) throw new Errors\HttpException(curl_error($curl));
+        if ($response === false) throw new HttpException(curl_error($curl));
         
         curl_close($curl);
 
