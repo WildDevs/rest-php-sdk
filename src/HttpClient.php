@@ -63,7 +63,9 @@ class HttpClient
         }
 
         $response = curl_exec($curl);
-        if ($response === false) throw new HttpException(curl_error($curl));
+        if ($response === false){
+          throw new HttpException(curl_error($curl).", Response: " . $response);
+        }
         
         curl_close($curl);
 
