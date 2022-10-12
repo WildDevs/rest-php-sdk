@@ -19,27 +19,27 @@ class API {
 
   private $_auth;
 
-  public function getHttpClient(): HttpClient {
+  public function getHttpClient() {
     return $this->_httpClient;
   }
 
-  public function setHttpClient(HttpClient $httpClient): void {
+  public function setHttpClient(HttpClient $httpClient) {
     $this->_httpClient = $httpClient;
   }
 
-  public function getApiKey(): string {
+  public function getApiKey() {
     return $this->_apiKey;
   }
 
-  public function setApiKey(string $apiKey): void {
+  public function setApiKey(string $apiKey) {
     $this->_apiKey = $apiKey;
   }
 
-  public function Auth(): Auth {
+  public function Auth() {
     return $this->_auth;
   }
 
-  private function setAuth(Auth $auth): void {
+  private function setAuth(Auth $auth) {
     $this->_auth = $auth;
   }
 
@@ -50,7 +50,7 @@ class API {
       'Content-Type: application/json'
     ];
 
-    if($this->getApiKey()) $headers[] = "x-api-key: " . $this->getApiKey();
+    if(!empty($this->getApiKey())) $headers[] = "x-api-key: " . $this->getApiKey();
     
     return $headers;
   }

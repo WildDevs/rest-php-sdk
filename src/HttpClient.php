@@ -12,9 +12,25 @@ class HttpClient
     private $_baseURL;
     private $_timeout = 30;
 
-    public function __construct($baseURL, $timeout = 30) {
+    public function getBaseURL() {
+        return $this->_baseURL;
+    }
+
+    public function setBaseURL($baseURL) {
         $this->_baseURL = $baseURL;
-        if ($timeout > 0) $this->_timeout = $timeout;
+    }
+
+    public function getTimeout() {
+        return $this->_timeout;
+    }
+
+    public function setTimeout($timeout) {
+        $this->_timeout = $timeout;
+    }
+
+    public function __construct($baseURL, $timeout = 30) {
+        $this->setBaseURL($baseURL);
+        if ($timeout > 0) $this->setTimeout($timeout);
     }
 
     public function request($method = "GET", $url = "", $data = null, $headers = []) {
