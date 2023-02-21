@@ -2,23 +2,11 @@
 
 namespace WildDevs\Models;
 
-/**
- * Snake to camel
- * @param string $txt text to convert
- * @return string
- */
-function snakeToCamel($txt)
-{
+function snakeToCamel($txt) {
     return lcfirst(str_replace('_', '', ucwords($txt, '_')));
 }
 
-/**
- * Snake to camel array keys
- * @param array $arr array to convert
- * @return array
- */
-function snakeToCamelArray($arr)
-{
+function snakeToCamelArray($arr) {
     $transformed = array();
 
     foreach ($arr as $key => $value) {
@@ -28,25 +16,13 @@ function snakeToCamelArray($arr)
     return $transformed;
 }
 
-/**
- * Base class for data models
- */
-abstract class Base
-{
-    /**
-     * Load class properties from json object
-     * @param array $data associated list of properties
-     */
-    public function fromJSON($data)
-    {
-        foreach ($data as $key => $value) {
-            $camelCased = snakeToCamel($key);
-
-            if (property_exists($this, $camelCased)) {
-                $this->$camelCased = $value;
+abstract class Base {
+    public function __construct($data) {
+        if ($data) {
+            foreach ($data as $key => $value) {
+                $camelCased = snakeToCamel($key);
+                $this->{$camelCased} = $value;
             }
         }
-
-        return $this;
     }
 }
