@@ -4,7 +4,7 @@ namespace WildDevs;
 
 use Exception;
 use WildDevs\Models\Response;
-use WildDevs\Endpoints\{ Random, Utils, Validate };
+use WildDevs\Endpoints\{ Random, Utils, Validate, Ai, Compilation, Games };
 
 /**
  * Wild Devs Api
@@ -20,16 +20,19 @@ class API {
   private $_random;
   private $_utils;
   private $_validate;
+  private $_ai;
+  private $_compilation;
+  private $_games;
 
   public function getHttpClient() {
     return $this->_httpClient;
   }
 
-  public function setHttpClient(HttpClient $httpClient) {
+  private function setHttpClient(HttpClient $httpClient) {
     $this->_httpClient = $httpClient;
   }
 
-  public function getApiKey() {
+  private function getApiKey() {
     return $this->_apiKey;
   }
 
@@ -50,7 +53,7 @@ class API {
     return $this->_headers;
   }
 
-  public function setHeaders(array $headers) {
+  private function setHeaders(array $headers) {
     $this->_headers = $headers;
   }
   
@@ -58,7 +61,7 @@ class API {
     return $this->_random;
   }
 
-  public function setRandom(Random $random) {
+  private function setRandom(Random $random) {
     $this->_random = $random;
   }
 
@@ -66,7 +69,7 @@ class API {
     return $this->_utils;
   }
 
-  public function setUtils(Utils $utils) {
+  private function setUtils(Utils $utils) {
     $this->_utils = $utils;
   }
 
@@ -74,8 +77,32 @@ class API {
     return $this->_validate;
   }
 
-  public function setValidate(Validate $validate) {
+  private function setValidate(Validate $validate) {
     $this->_validate = $validate;
+  }
+
+  public function ai(): Ai {
+    return $this->_ai;
+  }
+
+  private function setAi(Ai $ai) {
+    $this->_ai = $ai;
+  }
+
+  public function compilation(): Compilation {
+    return $this->_compilation;
+  }
+
+  private function setCompilation(Compilation $compilation) {
+    $this->_compilation = $compilation;
+  }
+
+  public function games(): Games {
+    return $this->_games;
+  }
+
+  private function setGames(Games $games) {
+    $this->_games = $games;
   }
 
   public function __construct() {
@@ -89,5 +116,8 @@ class API {
     $this->setRandom(new Random($this));
     $this->setUtils(new Utils($this));
     $this->setValidate(new Validate($this));
+    $this->setAi(new Ai($this));
+    $this->setCompilation(new Compilation($this));
+    $this->setGames(new Games($this));
   }
 }

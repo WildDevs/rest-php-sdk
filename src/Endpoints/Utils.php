@@ -33,4 +33,12 @@ class Utils
   public function hash($payload = []): Response {
     return $this->getApi()->getHttpClient()->post('/public/utils/hash', $payload, $this->getApi()->getHeaders());
   }
+
+  public function geoip($ip): Response {
+    return $this->getApi()->getHttpClient()->get('/member/geoip/'.$ip, $payload, $this->getApi()->getHeaders());
+  }
+
+  public function qrcode($payload = []): Response {
+    return $this->getApi()->getHttpClient()->post('/members/qrcode', $payload, $this->getApi()->getHeaders());
+  }
 }

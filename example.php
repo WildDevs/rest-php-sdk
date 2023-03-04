@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 include "autoload.php";
 
 $api = new WildDevs\API();
-$api->setApiKey('WD-MRZGD2AJMUE2LIWZFFIKQADZNJ2Y', 'fMkAjQV3.Qxde+MFHBqyIJzmTKGqDnwcLP0ZHj7G2dbMsC93EM6');
+$api->setApiKey('key', 'secret');
 
 $response = $api->random()->string();
 echo "<pre>";
@@ -25,6 +25,11 @@ print_r($response->getContent());
 echo "</pre>";
 
 $response = $api->validate()->ip(['ip' => '111.111.111.111']);
+echo "<pre>";
+print_r($response->getContent());
+echo "</pre>";
+
+$response = $api->games()->epicgames("free");
 echo "<pre>";
 print_r($response->getContent());
 echo "</pre>";
