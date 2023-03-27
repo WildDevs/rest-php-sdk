@@ -37,4 +37,4 @@ Returns the current and next weeks free games.
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)

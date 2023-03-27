@@ -55,7 +55,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **company**
 > WildDevs\Models\Response company($query = [])
@@ -98,7 +98,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **finance**
 > WildDevs\Models\Response finance($query = [])
@@ -141,7 +141,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **git**
 > WildDevs\Models\Response git($query = [])
@@ -184,7 +184,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **internet**
 > WildDevs\Models\Response internet($query = [])
@@ -227,7 +227,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **product**
 > WildDevs\Models\Response product($query = [])
@@ -270,7 +270,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **user**
 > WildDevs\Models\Response user($query = [])
@@ -316,7 +316,7 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **vehicle**
 > WildDevs\Models\Response vehicle($query = [])
@@ -359,4 +359,4 @@ Futher information and description about query parameters are described on the [
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)

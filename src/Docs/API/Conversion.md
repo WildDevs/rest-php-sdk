@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
 
 # **currency**
 > WildDevs\Models\Response currency($payload = [])
@@ -379,4 +379,4 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../README.md)
+[[Back to top]](#) [[Back to README]](../../README.md)
