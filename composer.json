@@ -12,6 +12,12 @@
             "email": "ray@wild-devs.net"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/WildDevs/rest-php-sdk"
+        }
+     ],  
     "require": {
         "php": ">=7.0",
         "ext-curl": "*"
