@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 include "autoload.php";
 
 $api = new WildDevs\API();
-$api->setApiKey('WD-4DNVFMQWIIUPQIV3FTLHY75IGBTI', 'RBPTyke1-8Y8SpuhlPP-eoUuSnPBjyP9CG-Xr0gdhkHJ+WifsIYISWs/2');
+$api->setApiKey('my-api-key', 'my-api-secret');
 
 $response = $api->random()->string();
 echo "<pre>";
