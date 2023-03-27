@@ -36,55 +36,55 @@ All URIs are relative to *https://api.wild-devs.net/v1*
 
 Class | Method | HTTP request |
 ------------ | ------------- | -------------
-[*Conversion*](Docs/API/Conversion.md) | [**unit**](Docs/API/Conversion.md#unit) | **POST** /unit | 
-[*Conversion*](Docs/API/Conversion.md) | [**currency**](Docs/API/Conversion.md#currency) | **POST** /currency | 
-[*Games*](Docs/API/Games.md) | [**epicgames**](Docs/API/Games.md#epicgames) | **GET** /epicgames/free | 
-[*Mockup*](Docs/API/Mockup.md) | [**address**](Docs/API/Mockup.md#address) | **GET** /address | 
-[*Mockup*](Docs/API/Mockup.md) | [**company**](Docs/API/Mockup.md#company) | **GET** /company | 
-[*Mockup*](Docs/API/Mockup.md) | [**finance**](Docs/API/Mockup.md#finance) | **GET** /finance | 
-[*Mockup*](Docs/API/Mockup.md) | [**git**](Docs/API/Mockup.md#git) | **GET** /git | 
-[*Mockup*](Docs/API/Mockup.md) | [**internet**](Docs/API/Mockup.md#internet) | **GET** /internet | 
-[*Mockup*](Docs/API/Mockup.md) | [**product**](Docs/API/Mockup.md#product) | **GET** /product | 
-[*Mockup*](Docs/API/Mockup.md) | [**user**](Docs/API/Mockup.md#user) | **GET** /user | 
-[*Mockup*](Docs/API/Mockup.md) | [**vehicle**](Docs/API/Mockup.md#vehicle) | **GET** /vehicle | 
-[*Random*](Docs/API/Random.md) | [**string**](Docs/API/Random.md#string) | **GET** /string | 
-[*Random*](Docs/API/Random.md) | [**number**](Docs/API/Random.md#number) | **GET** /number | 
-[*UrlShortener*](Docs/API/UrlShortener.md) | [**getAll**](Docs/API/UrlShortener.md#getAll) | **GET** /urlshorteners | 
-[*UrlShortener*](Docs/API/UrlShortener.md) | [**create**](Docs/API/UrlShortener.md#create) | **POST** /urlshortener | 
-[*UrlShortener*](Docs/API/UrlShortener.md) | [**delete**](Docs/API/UrlShortener.md#delete) | **DELETE** /urlshortener/{id} | 
-[*Utility*](Docs/API/Utility.md) | [**compile**](Docs/API/Utility.md#compile) | **POST** /compile | 
-[*Utility*](Docs/API/Utility.md) | [**decode**](Docs/API/Utility.md#decode) | **POST** /decode | 
-[*Utility*](Docs/API/Utility.md) | [**encode**](Docs/API/Utility.md#encode) | **POST** /encode | 
-[*Utility*](Docs/API/Utility.md) | [**geoip**](Docs/API/Utility.md#geoip) | **GET** /geoip/{ip} | 
-[*Utility*](Docs/API/Utility.md) | [**hash**](Docs/API/Utility.md#hash) | **POST** /hash | 
-[*Utility*](Docs/API/Utility.md) | [**qrcode**](Docs/API/Utility.md#qrcode) | **POST** /qrcode |
-[*Validation*](Docs/API/Validation.md) | [**bic**](Docs/API/Validation.md#bic) | **POST** /bic | 
-[*Validation*](Docs/API/Validation.md) | [**btc**](Docs/API/Validation.md#btc) | **POST** /btc | 
-[*Validation*](Docs/API/Validation.md) | [**creditcard**](Docs/API/Validation.md#creditcard) | **POST** /creditcard | 
-[*Validation*](Docs/API/Validation.md) | [**ean**](Docs/API/Validation.md#ean) | **POST** /ean | 
-[*Validation*](Docs/API/Validation.md) | [**email**](Docs/API/Validation.md#email) | **POST** /email | 
-[*Validation*](Docs/API/Validation.md) | [**eth**](Docs/API/Validation.md#eth) | **POST** /eth | 
-[*Validation*](Docs/API/Validation.md) | [**fqdn**](Docs/API/Validation.md#fqdn) | **POST** /fqdn | 
-[*Validation*](Docs/API/Validation.md) | [**iban**](Docs/API/Validation.md#iban) | **POST** /iban | 
-[*Validation*](Docs/API/Validation.md) | [**identitycard**](Docs/API/Validation.md#identitycard) | **POST** /identitycard | 
-[*Validation*](Docs/API/Validation.md) | [**imei**](Docs/API/Validation.md#imei) | **POST** /imei | 
-[*Validation*](Docs/API/Validation.md) | [**ip**](Docs/API/Validation.md#ip) | **POST** /ip | 
-[*Validation*](Docs/API/Validation.md) | [**isbn**](Docs/API/Validation.md#isbn) | **POST** /isbn | 
-[*Validation*](Docs/API/Validation.md) | [**isin**](Docs/API/Validation.md#isin) | **POST** /isin | 
-[*Validation*](Docs/API/Validation.md) | [**issn**](Docs/API/Validation.md#issn) | **POST** /issn | 
-[*Validation*](Docs/API/Validation.md) | [**licenseplate**](Docs/API/Validation.md#licenseplate) | **POST** /licenseplate | 
-[*Validation*](Docs/API/Validation.md) | [**mac**](Docs/API/Validation.md#mac) | **POST** /mac | 
-[*Validation*](Docs/API/Validation.md) | [**magnet**](Docs/API/Validation.md#magnet) | **POST** /magnet | 
-[*Validation*](Docs/API/Validation.md) | [**mimetype**](Docs/API/Validation.md#mimetype) | **POST** /mimetype | 
-[*Validation*](Docs/API/Validation.md) | [**password**](Docs/API/Validation.md#password) | **POST** /password | 
-[*Validation*](Docs/API/Validation.md) | [**postalcode**](Docs/API/Validation.md#postalcode) | **POST** /postalcode | 
-[*Validation*](Docs/API/Validation.md) | [**semver**](Docs/API/Validation.md#semver) | **POST** /semver | 
-[*Validation*](Docs/API/Validation.md) | [**tax**](Docs/API/Validation.md#tax) | **POST** /tax | 
-[*Validation*](Docs/API/Validation.md) | [**uuid**](Docs/API/Validation.md#uuid) | **POST** /uuid | 
+[*Conversion*](src/Docs/API/Conversion.md) | [**unit**](src/Docs/API/Conversion.md#unit) | **POST** /unit | 
+[*Conversion*](src/Docs/API/Conversion.md) | [**currency**](src/Docs/API/Conversion.md#currency) | **POST** /currency | 
+[*Games*](src/Docs/API/Games.md) | [**epicgames**](src/Docs/API/Games.md#epicgames) | **GET** /epicgames/free | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**address**](src/Docs/API/Mockup.md#address) | **GET** /address | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**company**](src/Docs/API/Mockup.md#company) | **GET** /company | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**finance**](src/Docs/API/Mockup.md#finance) | **GET** /finance | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**git**](src/Docs/API/Mockup.md#git) | **GET** /git | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**internet**](src/Docs/API/Mockup.md#internet) | **GET** /internet | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**product**](src/Docs/API/Mockup.md#product) | **GET** /product | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**user**](src/Docs/API/Mockup.md#user) | **GET** /user | 
+[*Mockup*](src/Docs/API/Mockup.md) | [**vehicle**](src/Docs/API/Mockup.md#vehicle) | **GET** /vehicle | 
+[*Random*](src/Docs/API/Random.md) | [**string**](src/Docs/API/Random.md#string) | **GET** /string | 
+[*Random*](src/Docs/API/Random.md) | [**number**](src/Docs/API/Random.md#number) | **GET** /number | 
+[*UrlShortener*](src/Docs/API/UrlShortener.md) | [**getAll**](src/Docs/API/UrlShortener.md#getAll) | **GET** /urlshorteners | 
+[*UrlShortener*](src/Docs/API/UrlShortener.md) | [**create**](src/Docs/API/UrlShortener.md#create) | **POST** /urlshortener | 
+[*UrlShortener*](src/Docs/API/UrlShortener.md) | [**delete**](src/Docs/API/UrlShortener.md#delete) | **DELETE** /urlshortener/{id} | 
+[*Utility*](src/Docs/API/Utility.md) | [**compile**](src/Docs/API/Utility.md#compile) | **POST** /compile | 
+[*Utility*](src/Docs/API/Utility.md) | [**decode**](src/Docs/API/Utility.md#decode) | **POST** /decode | 
+[*Utility*](src/Docs/API/Utility.md) | [**encode**](src/Docs/API/Utility.md#encode) | **POST** /encode | 
+[*Utility*](src/Docs/API/Utility.md) | [**geoip**](src/Docs/API/Utility.md#geoip) | **GET** /geoip/{ip} | 
+[*Utility*](src/Docs/API/Utility.md) | [**hash**](src/Docs/API/Utility.md#hash) | **POST** /hash | 
+[*Utility*](src/Docs/API/Utility.md) | [**qrcode**](src/Docs/API/Utility.md#qrcode) | **POST** /qrcode |
+[*Validation*](src/Docs/API/Validation.md) | [**bic**](src/Docs/API/Validation.md#bic) | **POST** /bic | 
+[*Validation*](src/Docs/API/Validation.md) | [**btc**](src/Docs/API/Validation.md#btc) | **POST** /btc | 
+[*Validation*](src/Docs/API/Validation.md) | [**creditcard**](src/Docs/API/Validation.md#creditcard) | **POST** /creditcard | 
+[*Validation*](src/Docs/API/Validation.md) | [**ean**](src/Docs/API/Validation.md#ean) | **POST** /ean | 
+[*Validation*](src/Docs/API/Validation.md) | [**email**](src/Docs/API/Validation.md#email) | **POST** /email | 
+[*Validation*](src/Docs/API/Validation.md) | [**eth**](src/Docs/API/Validation.md#eth) | **POST** /eth | 
+[*Validation*](src/Docs/API/Validation.md) | [**fqdn**](src/Docs/API/Validation.md#fqdn) | **POST** /fqdn | 
+[*Validation*](src/Docs/API/Validation.md) | [**iban**](src/Docs/API/Validation.md#iban) | **POST** /iban | 
+[*Validation*](src/Docs/API/Validation.md) | [**identitycard**](src/Docs/API/Validation.md#identitycard) | **POST** /identitycard | 
+[*Validation*](src/Docs/API/Validation.md) | [**imei**](src/Docs/API/Validation.md#imei) | **POST** /imei | 
+[*Validation*](src/Docs/API/Validation.md) | [**ip**](src/Docs/API/Validation.md#ip) | **POST** /ip | 
+[*Validation*](src/Docs/API/Validation.md) | [**isbn**](src/Docs/API/Validation.md#isbn) | **POST** /isbn | 
+[*Validation*](src/Docs/API/Validation.md) | [**isin**](src/Docs/API/Validation.md#isin) | **POST** /isin | 
+[*Validation*](src/Docs/API/Validation.md) | [**issn**](src/Docs/API/Validation.md#issn) | **POST** /issn | 
+[*Validation*](src/Docs/API/Validation.md) | [**licenseplate**](src/Docs/API/Validation.md#licenseplate) | **POST** /licenseplate | 
+[*Validation*](src/Docs/API/Validation.md) | [**mac**](src/Docs/API/Validation.md#mac) | **POST** /mac | 
+[*Validation*](src/Docs/API/Validation.md) | [**magnet**](src/Docs/API/Validation.md#magnet) | **POST** /magnet | 
+[*Validation*](src/Docs/API/Validation.md) | [**mimetype**](src/Docs/API/Validation.md#mimetype) | **POST** /mimetype | 
+[*Validation*](src/Docs/API/Validation.md) | [**password**](src/Docs/API/Validation.md#password) | **POST** /password | 
+[*Validation*](src/Docs/API/Validation.md) | [**postalcode**](src/Docs/API/Validation.md#postalcode) | **POST** /postalcode | 
+[*Validation*](src/Docs/API/Validation.md) | [**semver**](src/Docs/API/Validation.md#semver) | **POST** /semver | 
+[*Validation*](src/Docs/API/Validation.md) | [**tax**](src/Docs/API/Validation.md#tax) | **POST** /tax | 
+[*Validation*](src/Docs/API/Validation.md) | [**uuid**](src/Docs/API/Validation.md#uuid) | **POST** /uuid | 
 
 ## Documentation For Models
 
- - [Response](Models/Response.md)
+ - [Response](src/Docs/Models/Response.md)
   
 ## Documentation For Authorization
 

@@ -38,7 +38,7 @@ Shorten urls are bound to the user who owns the api-key. This is an endpoint to 
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **create**
 > WildDevs\Models\Response create($payload = [])
@@ -89,7 +89,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **delete**
 > WildDevs\Models\Response delete($id)
@@ -126,4 +126,4 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)

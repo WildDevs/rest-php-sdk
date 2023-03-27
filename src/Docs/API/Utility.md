@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **decode**
 > WildDevs\Models\Response decode($payload = [])
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **encode**
 > WildDevs\Models\Response encode($payload = [])
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **geoip**
 > WildDevs\Models\Response geoip($ip)
@@ -217,7 +217,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **hash**
 > WildDevs\Models\Response hash($payload = [])
@@ -258,7 +258,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **qrcode**
 > WildDevs\Models\Response qrcode($payload = [])
@@ -307,4 +307,4 @@ Futher information and description about payload fields are described on the [AP
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)

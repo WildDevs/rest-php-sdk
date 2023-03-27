@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **bic**
 > WildDevs\Models\Response bic($payload)
@@ -108,7 +108,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **btc**
 > WildDevs\Models\Response btc($payload)
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **creditcard**
 > WildDevs\Models\Response creditcard($payload)
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **ean**
 > WildDevs\Models\Response ean($payload)
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **email**
 > WildDevs\Models\Response email($payload)
@@ -296,7 +296,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **eth**
 > WildDevs\Models\Response eth($payload)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **fqdn**
 > WildDevs\Models\Response fqdn($payload)
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **iban**
 > WildDevs\Models\Response iban($payload)
@@ -419,7 +419,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **identitycard**
 > WildDevs\Models\Response identitycard($payload)
@@ -460,7 +460,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **iban**
 > WildDevs\Models\Response iban($payload)
@@ -501,7 +501,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **imei**
 > WildDevs\Models\Response imei($payload)
@@ -549,7 +549,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **ip**
 > WildDevs\Models\Response ip($payload)
@@ -590,7 +590,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **isbn**
 > WildDevs\Models\Response isbn($payload)
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **isin**
 > WildDevs\Models\Response isin($payload)
@@ -672,7 +672,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **issn**
 > WildDevs\Models\Response issn($payload)
@@ -713,7 +713,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **licenseplate**
 > WildDevs\Models\Response licenseplate($payload)
@@ -772,7 +772,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **mac**
 > WildDevs\Models\Response mac($payload)
@@ -817,7 +817,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **magnet**
 > WildDevs\Models\Response magnet($payload)
@@ -858,7 +858,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **mimetype**
 > WildDevs\Models\Response mimetype($payload)
@@ -938,7 +938,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **password**
 > WildDevs\Models\Response password($payload)
@@ -999,7 +999,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **postalcode**
 > WildDevs\Models\Response postalcode($payload)
@@ -1114,7 +1114,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **semver**
 > WildDevs\Models\Response semver($payload)
@@ -1155,7 +1155,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **tax**
 > WildDevs\Models\Response tax($payload)
@@ -1235,7 +1235,7 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **uuid**
 > WildDevs\Models\Response uuid($payload)
@@ -1276,4 +1276,4 @@ Name | Type | Description  | Notes
 
 [**WildDevs\Models\Response**](../Models/Response.md)
 
-[[Back to top]](#) [[Back to README]](../../README.md)
+[[Back to top]](#) [[Back to README]](../../../README.md)
