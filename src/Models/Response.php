@@ -13,6 +13,10 @@ class Response extends Base {
         return !$raw ? $this->content : $this->contentRaw;
     }
 
+    public function getData() {
+        return $this->content['data'] ?? $this->content;
+    }
+
     public function getHeaders($raw = false) {
         return !$raw ? $this->headers : $this->headersRaw;
     }

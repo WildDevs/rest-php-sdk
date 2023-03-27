@@ -22,11 +22,11 @@ class Random
     $this->setApi($api);
   }
 
-  public function string($payload = []): Response {
-    return $this->getApi()->getHttpClient()->post('/public/random/string', $payload, $this->getApi()->getHeaders());
+  public function string($payload = []) {
+    return $this->getApi()->getHttpClient()->post('/string', $payload, $this->getApi()->getHeaders());
   }
 
-  public function number($payload = []): Response {
-    return $this->getApi()->getHttpClient()->post('/public/random/number', $payload, $this->getApi()->getHeaders());
+  public function number($payload = []) {
+    return $this->getApi()->getHttpClient()->post('/number', $payload, $this->getApi()->getHeaders());
   }
 }

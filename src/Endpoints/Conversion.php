@@ -6,7 +6,7 @@ use Exception;
 use WildDevs\API;
 use WildDevs\Models\Response;
 
-class Ai
+class Conversion
 {
   private $_api;
 
@@ -22,11 +22,11 @@ class Ai
     $this->setApi($api);
   }
 
-  public function chat($payload = []): Response {
-    return $this->getApi()->getHttpClient()->post('/subscriber/chat', $payload, $this->getApi()->getHeaders());
+  public function unit($payload = []) {
+    return $this->getApi()->getHttpClient()->post('/unit', $payload, $this->getApi()->getHeaders());
   }
 
-  public function image($payload = []): Response {
-    return $this->getApi()->getHttpClient()->post('/subscriber/number', $payload, $this->getApi()->getHeaders());
+  public function currency($payload = []) {
+    return $this->getApi()->getHttpClient()->post('/currency', $payload, $this->getApi()->getHeaders());
   }
 }

@@ -4,13 +4,14 @@ namespace WildDevs;
 
 use Exception;
 use WildDevs\Models\Response;
-use WildDevs\Endpoints\{ Random, Utils, Validate, Ai, Compilation, Games };
+use WildDevs\Endpoints\{ Random, Utility, Validate, Games, Conversion, Mockup, UrlShortener };
 
 /**
  * Wild Devs Api
  */
 class API {
-  const SDK_VERSION = "1.1";
+  const SDK_VERSION = "1.1.0";
+  const API_VERSION = "1.0.1";
   const DEFAULT_TIMEOUT = 30;
   const ENDPOINT = "https://api.wild-devs.net/v1";
   
@@ -20,9 +21,10 @@ class API {
   private $_random;
   private $_utils;
   private $_validate;
-  private $_ai;
-  private $_compilation;
+  private $_conversion;
+  private $_mockup;
   private $_games;
+  private $_urlshortener;
 
   public function getHttpClient() {
     return $this->_httpClient;
@@ -65,12 +67,12 @@ class API {
     $this->_random = $random;
   }
 
-  public function utils(): Utils {
-    return $this->_utils;
+  public function utility(): Utility {
+    return $this->_utility;
   }
 
-  private function setUtils(Utils $utils) {
-    $this->_utils = $utils;
+  private function setUtility(Utility $utility) {
+    $this->_utility = $utility;
   }
 
   public function validate(): Validate {
@@ -81,14 +83,6 @@ class API {
     $this->_validate = $validate;
   }
 
-  public function ai(): Ai {
-    return $this->_ai;
-  }
-
-  private function setAi(Ai $ai) {
-    $this->_ai = $ai;
-  }
-
   public function compilation(): Compilation {
     return $this->_compilation;
   }
@@ -97,12 +91,36 @@ class API {
     $this->_compilation = $compilation;
   }
 
+  public function conversion(): Conversion {
+    return $this->_conversion;
+  }
+
+  private function setConversion(Conversion $conversion) {
+    $this->_conversion = $conversion;
+  }
+
+  public function mockup(): Mockup {
+    return $this->_mockup;
+  }
+
+  private function setMockup(Mockup $mockup) {
+    $this->_mockup = $mockup;
+  }
+
   public function games(): Games {
     return $this->_games;
   }
 
   private function setGames(Games $games) {
     $this->_games = $games;
+  }
+
+  public function urlShortener(): UrlShortener {
+    return $this->_urlShortener;
+  }
+
+  private function setUrlShortener(UrlShortener $urlShortener) {
+    $this->_urlShortener = $urlShortener;
   }
 
   public function __construct() {
@@ -114,10 +132,11 @@ class API {
     
     $this->setHttpClient(new HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
     $this->setRandom(new Random($this));
-    $this->setUtils(new Utils($this));
+    $this->setUtility(new Utility($this));
     $this->setValidate(new Validate($this));
-    $this->setAi(new Ai($this));
-    $this->setCompilation(new Compilation($this));
+    $this->setConversion(new Conversion($this));
+    $this->setUrlShortener(new UrlShortener($this));
+    $this->setMockup(new Mockup($this));
     $this->setGames(new Games($this));
   }
 }

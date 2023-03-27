@@ -1,6 +1,6 @@
 {
     "name": "wilddevs/php-rest-sdk",
-    "description": "WildDevs REST API client",
+    "description": "WildDevs API PHP REST SDK",
     "type": "library",
     "homepage": "https://github.com/WildDevs/rest-php-sdk",
     "license": "GPL-3.0-or-later",
@@ -15,9 +15,6 @@
     "require": {
         "php": ">=7.0",
         "ext-curl": "*"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^5"
     },
     "autoload": {
         "psr-4": {
