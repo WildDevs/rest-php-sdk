@@ -128,7 +128,7 @@ Generate random numbers.
     ];
 
     try {
-        $response = $api->random()->string($payload);
+        $response = $api->random()->number($payload);
         $data = $response->getData();
         print_r($data);
     } catch (Exception $e) {
