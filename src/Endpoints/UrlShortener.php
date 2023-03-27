@@ -22,15 +22,15 @@ class UrlShortener
     $this->setApi($api);
   }
 
-  public function getUrls() {
+  public function getAll() {
     return $this->getApi()->getHttpClient()->get('/urlshorteners', $this->getApi()->getHeaders());
   }
 
-  public function deleteUrl($id) {
-    return $this->getApi()->getHttpClient()->delete('/urlshorteners/' . $id, $this->getApi()->getHeaders());
+  public function delete($id) {
+    return $this->getApi()->getHttpClient()->delete('/urlshortener/' . $id, $this->getApi()->getHeaders());
   }
 
-  public function createUrl($payload = []) {
+  public function create($payload = []) {
     return $this->getApi()->getHttpClient()->post('/urlshortener', $payload, $this->getApi()->getHeaders());
   }
 }

@@ -127,26 +127,26 @@ deg, rad, grad, arcmin, arcsec
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+    require_once(__DIR__ . '/vendor/autoload.php');
 
-$api = new WildDevs\API();
+    $api = new WildDevs\API();
 
-// Set your API-Key and API-Secret here
-$api->setApiKey('my-api-key', 'my-api-secret');
+    // Set your API-Key and API-Secret here
+    $api->setApiKey('my-api-key', 'my-api-secret');
 
-$payload = [
-    "from" => "m/s",
-    "to" => "m/h",
-    "amount" => 10.65
-];
+    $payload = [
+        "from" => "m/s",
+        "to" => "m/h",
+        "amount" => 10.65
+    ];
 
-try {
-    $response = $api->unit($payload);
-    $data = $response->getData();
-    print_r($data);
-} catch (Exception $e) {
-    echo 'Exception when calling api->unit: ', $e->getMessage(), PHP_EOL;
-}
+    try {
+        $response = $api->convert()->unit($payload);
+        $data = $response->getData();
+        print_r($data);
+    } catch (Exception $e) {
+        echo 'Exception when calling api->convert()->unit: ', $e->getMessage(), PHP_EOL;
+    }
 ?>
 ```
 
@@ -346,26 +346,26 @@ ZWL (Zimbabwean Dollar)
 ### Example
 ```php
 <?php
-require_once(__DIR__ . '/vendor/autoload.php');
+    require_once(__DIR__ . '/vendor/autoload.php');
 
-$api = new WildDevs\API();
+    $api = new WildDevs\API();
 
-// Set your API-Key and API-Secret here
-$api->setApiKey('my-api-key', 'my-api-secret');
+    // Set your API-Key and API-Secret here
+    $api->setApiKey('my-api-key', 'my-api-secret');
 
-$payload = [
-    "from" => "USD",
-    "to" => "EUR",
-    "amount" => 192.47
-];
+    $payload = [
+        "from" => "USD",
+        "to" => "EUR",
+        "amount" => 192.47
+    ];
 
-try {
-    $response = $api->currency($payload);
-    $data = $response->getData();
-    print_r($data);
-} catch (Exception $e) {
-    echo 'Exception when calling api->currency: ', $e->getMessage(), PHP_EOL;
-}
+    try {
+        $response = $api->convert()->currency($payload);
+        $data = $response->getData();
+        print_r($data);
+    } catch (Exception $e) {
+        echo 'Exception when calling api->convert()->currency: ', $e->getMessage(), PHP_EOL;
+    }
 ?>
 ```
 

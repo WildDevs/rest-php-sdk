@@ -91,7 +91,7 @@ class API {
     $this->_compilation = $compilation;
   }
 
-  public function conversion(): Conversion {
+  public function convert(): Conversion {
     return $this->_conversion;
   }
 

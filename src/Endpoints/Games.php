@@ -22,7 +22,7 @@ class Games
     $this->setApi($api);
   }
 
-  public function epicgames($type = "free") {
-    return $this->getApi()->getHttpClient()->get('/epicgames/'.$type, $this->getApi()->getHeaders());
+  public function epicgames() {
+    return $this->getApi()->getHttpClient()->get('/epicgames/free', $this->getApi()->getHeaders());
   }
 }

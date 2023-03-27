@@ -36,5 +36,5 @@ $api->setApiKey('WD-4DNVFMQWIIUPQIV3FTLHY75IGBTI', 'RBPTyke1-8Y8SpuhlPP-eoUuSnPB
 
 $response = $api->mockup()->user(["finance" => true]);
 echo "<pre>";
-print_r($response->getHeaders(true));
+print_r($response->getData());
 echo "</pre>";
