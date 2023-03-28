@@ -47,8 +47,9 @@ Class | Method | HTTP request |
 [*Mockup*](src/Docs/API/Mockup.md) | [**product**](src/Docs/API/Mockup.md#product) | **GET** /product | 
 [*Mockup*](src/Docs/API/Mockup.md) | [**user**](src/Docs/API/Mockup.md#user) | **GET** /user | 
 [*Mockup*](src/Docs/API/Mockup.md) | [**vehicle**](src/Docs/API/Mockup.md#vehicle) | **GET** /vehicle | 
-[*Random*](src/Docs/API/Random.md) | [**string**](src/Docs/API/Random.md#string) | **GET** /string | 
-[*Random*](src/Docs/API/Random.md) | [**number**](src/Docs/API/Random.md#number) | **GET** /number | 
+[*Random*](src/Docs/API/Random.md) | [**joke**](src/Docs/API/Random.md#joke) | **GET** /joke |
+[*Random*](src/Docs/API/Random.md) | [**string**](src/Docs/API/Random.md#string) | **POST** /string | 
+[*Random*](src/Docs/API/Random.md) | [**number**](src/Docs/API/Random.md#number) | **POST** /number | 
 [*UrlShortener*](src/Docs/API/UrlShortener.md) | [**getAll**](src/Docs/API/UrlShortener.md#getAll) | **GET** /urlshorteners | 
 [*UrlShortener*](src/Docs/API/UrlShortener.md) | [**create**](src/Docs/API/UrlShortener.md#create) | **POST** /urlshortener | 
 [*UrlShortener*](src/Docs/API/UrlShortener.md) | [**delete**](src/Docs/API/UrlShortener.md#delete) | **DELETE** /urlshortener/{id} | 

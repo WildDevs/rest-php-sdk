@@ -22,6 +22,10 @@ class Random
     $this->setApi($api);
   }
 
+  public function joke() {
+    return $this->getApi()->getHttpClient()->get('/joke', $payload, $this->getApi()->getHeaders());
+  }
+
   public function string($payload = []) {
     return $this->getApi()->getHttpClient()->post('/string', $payload, $this->getApi()->getHeaders());
   }

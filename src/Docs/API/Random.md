@@ -4,8 +4,45 @@ All URIs are relative to *https://api.wild-devs.net/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**joke**](Random.md#joke) | **GET** /joke | 
 [**string**](Random.md#string) | **POST** /string | 
 [**number**](Random.md#number) | **POST** /number | 
+
+# **joke**
+> WildDevs\Models\Response joke()
+
+Delivers a random joke from a pool of ~5000. 
+
+<h3>Disclaimer</h3>
+<div style="border: 1px dashed red; padding: 10px; background-color: #f0f0f0;">
+    It has been attempted to keep the jokes as clean as possible. Since the data has been collected by scraping websites, it is possible that there may be a few jokes that are inappropriate or offensive to some people.
+</div>
+
+### Example
+```php
+<?php
+    require_once(__DIR__ . '/vendor/autoload.php');
+
+    $api = new WildDevs\API();
+
+    // Set your API-Key and API-Secret here
+    $api->setApiKey('my-api-key', 'my-api-secret');
+
+    try {
+        $response = $api->random()->joke();
+        $data = $response->getData();
+        print_r($data);
+    } catch (Exception $e) {
+        echo 'Exception when calling api->random()->string: ', $e->getMessage(), PHP_EOL;
+    }
+?>
+```
+
+### Return type
+
+[**WildDevs\Models\Response**](../Models/Response.md)
+
+[[Back to top]](#) [[Back to README]](../../../README.md)
 
 # **string**
 > WildDevs\Models\Response string($payload = [])
@@ -146,5 +183,3 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WildDevs\Models\Response**](../Models/Response.md)
-
-[[Back to top]](#) [[Back to README]](../../../README.md)
