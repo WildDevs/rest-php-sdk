@@ -47,6 +47,9 @@ Class | Method | HTTP request |
 [*Mockup*](src/Docs/API/Mockup.md) | [**product**](src/Docs/API/Mockup.md#product) | **GET** /product | 
 [*Mockup*](src/Docs/API/Mockup.md) | [**user**](src/Docs/API/Mockup.md#user) | **GET** /user | 
 [*Mockup*](src/Docs/API/Mockup.md) | [**vehicle**](src/Docs/API/Mockup.md#vehicle) | **GET** /vehicle | 
+[*NetTools*](src/Docs/API/NetTools.md) | [**dnslookup**](src/Docs/API/NetTools.md#dnslookup) | **GET** /dnslookup?source={fqdn} |
+[*NetTools*](src/Docs/API/NetTools.md) | [**ipinfo**](src/Docs/API/NetTools.md#ipinfo) | **GET** /ipinfo?source={ip} | 
+[*NetTools*](src/Docs/API/NetTools.md) | [**whatsmyip**](src/Docs/API/NetTools.md#whatsmyip) | **GET** /whatsmyip | 
 [*Random*](src/Docs/API/Random.md) | [**joke**](src/Docs/API/Random.md#joke) | **GET** /joke |
 [*Random*](src/Docs/API/Random.md) | [**string**](src/Docs/API/Random.md#string) | **POST** /string | 
 [*Random*](src/Docs/API/Random.md) | [**number**](src/Docs/API/Random.md#number) | **POST** /number | 
