@@ -4,7 +4,7 @@ namespace WildDevs;
 
 use Exception;
 use WildDevs\Models\Response;
-use WildDevs\Endpoints\{ Random, Utility, Validate, Games, Conversion, Mockup, UrlShortener };
+use WildDevs\Endpoints\{ Random, NetTools, Utility, Validate, Games, Conversion, Mockup, UrlShortener };
 
 /**
  * Wild Devs Api
@@ -19,6 +19,7 @@ class API {
   private $_apiKey;
   private $_headers;
   private $_random;
+  private $_netTools;
   private $_utils;
   private $_validate;
   private $_conversion;
@@ -67,6 +68,14 @@ class API {
     $this->_random = $random;
   }
 
+  public function netTools(): NetTools {
+    return $this->_netTools;
+  }
+
+  private function setNetTools(NetTools $netTools) {
+    $this->_netTools = $netTools;
+  }
+
   public function utility(): Utility {
     return $this->_utility;
   }
@@ -81,14 +90,6 @@ class API {
 
   private function setValidate(Validate $validate) {
     $this->_validate = $validate;
-  }
-
-  public function compilation(): Compilation {
-    return $this->_compilation;
-  }
-
-  private function setCompilation(Compilation $compilation) {
-    $this->_compilation = $compilation;
   }
 
   public function convert(): Conversion {
@@ -132,6 +133,7 @@ class API {
     
     $this->setHttpClient(new HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
     $this->setRandom(new Random($this));
+    $this->setNetTools(new NetTools($this));
     $this->setUtility(new Utility($this));
     $this->setValidate(new Validate($this));
     $this->setConversion(new Conversion($this));
