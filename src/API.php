@@ -4,7 +4,7 @@ namespace WildDevs;
 
 use Exception;
 use WildDevs\Models\Response;
-use WildDevs\Endpoints\{ Random, NetTools, Utility, Validate, Games, Conversion, Mockup, UrlShortener };
+use WildDevs\Endpoints\{ AI, Random, NetTools, Utility, Validate, Games, Conversion, Mockup, UrlShortener };
 
 /**
  * Wild Devs Api
@@ -18,6 +18,7 @@ class API {
   private $_httpClient;
   private $_apiKey;
   private $_headers;
+  private $_ai;
   private $_random;
   private $_netTools;
   private $_utils;
@@ -58,6 +59,14 @@ class API {
 
   private function setHeaders(array $headers) {
     $this->_headers = $headers;
+  }
+
+  public function ai(): AI {
+    return $this->_ai;
+  }
+
+  private function setAI(AI $ai) {
+    $this->_ai = $ai;
   }
   
   public function random(): Random {
@@ -132,6 +141,7 @@ class API {
     ]);
     
     $this->setHttpClient(new HttpClient(self::ENDPOINT, self::DEFAULT_TIMEOUT));
+    $this->setAI(new AI($this));
     $this->setRandom(new Random($this));
     $this->setNetTools(new NetTools($this));
     $this->setUtility(new Utility($this));
