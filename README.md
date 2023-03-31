@@ -37,7 +37,7 @@ All URIs are relative to *https://api.wild-devs.net/v1*
 Class | Method | HTTP request |
 ------------ | ------------- | -------------
 [*AI*](src/Docs/API/AI.md) | [**dictionary**](src/Docs/API/AI.md#dictionary) | **POST** /dictionary | 
-[*AI*](src/Docs/API/AI.md) | [**synonymes**](src/Docs/API/AI.md#synonymes) | **POST** /synonymes | 
+[*AI*](src/Docs/API/AI.md) | [**synonyms**](src/Docs/API/AI.md#synonyms) | **POST** /synonyms | 
 [*Conversion*](src/Docs/API/Conversion.md) | [**unit**](src/Docs/API/Conversion.md#unit) | **POST** /unit | 
 [*Conversion*](src/Docs/API/Conversion.md) | [**currency**](src/Docs/API/Conversion.md#currency) | **POST** /currency | 
 [*Games*](src/Docs/API/Games.md) | [**epicgames**](src/Docs/API/Games.md#epicgames) | **GET** /epicgames/free | 

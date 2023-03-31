@@ -5,7 +5,7 @@ All URIs are relative to *https://api.wild-devs.net/v1*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dictionary**](AI.md#dictionary) | **POST** /dictionary | 
-[**synonymes**](AI.md#synonymes) | **POST** /synonymes | 
+[**synonyms**](AI.md#synonyms) | **POST** /synonyms | 
 
 # **dictionary**
 > WildDevs\Models\Response dictionary($payload)
@@ -166,8 +166,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to README]](../../../README.md)
 
-# **synonymes**
-> WildDevs\Models\Response synonymes($payload)
+# **synonyms**
+> WildDevs\Models\Response synonyms($payload)
 
 `Subscriber` Only Endpoint. API-Key is needed. This endpoint consumes AI tokens (depends on the output length).
 
@@ -304,11 +304,11 @@ Zulu
     ];
 
     try {
-        $response = $api->ai()->synonymes($payload);
+        $response = $api->ai()->synonyms($payload);
         $data = $response->getData();
         print_r($data);
     } catch (Exception $e) {
-        echo 'Exception when calling api->ai()->synonymes: ', $e->getMessage(), PHP_EOL;
+        echo 'Exception when calling api->ai()->synonyms: ', $e->getMessage(), PHP_EOL;
     }
 ?>
 ```

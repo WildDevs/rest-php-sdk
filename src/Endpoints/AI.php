@@ -26,7 +26,7 @@ class Conversion
     return $this->getApi()->getHttpClient()->post('/dictionary', $payload, $this->getApi()->getHeaders());
   }
 
-  public function synonymes($payload = []) {
-    return $this->getApi()->getHttpClient()->post('/synonymes', $payload, $this->getApi()->getHeaders());
+  public function synonyms($payload = []) {
+    return $this->getApi()->getHttpClient()->post('/synonyms', $payload, $this->getApi()->getHeaders());
   }
 }
